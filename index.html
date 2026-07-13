@@ -90,9 +90,9 @@
     .headline { margin-top: 1rem; color: var(--color-text-muted); font-size: var(--text-lg); max-width: 40ch; }
     .contact-grid { margin-top: 1.5rem; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.85rem; }
     .contact-item, .metric, .card { background: var(--color-surface); border: 1px solid var(--color-line); border-radius: 18px; }
-    .contact-item { padding: 0.95rem 1rem; min-height: 88px; }
+    .contact-item { padding: 0.95rem 1rem; min-height: 88px; min-width: 0; overflow-wrap: anywhere; word-break: break-word; }
     .label { display: block; font-size: var(--text-xs); color: var(--color-text-faint); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.35rem; }
-    .contact-value { color: var(--color-text-muted); }
+    .contact-value { color: var(--color-text-muted); min-width: 0; overflow-wrap: anywhere; word-break: break-word; }
     .summary-card, .metrics, .section-card, .skill-card, .edu-card, .lang-card { padding: 1.2rem; }
     .summary-card p, .section-card p, .skill-line, li, .contact-value, .edu-card p, .lang-card p { color: var(--color-text-muted); }
     .metrics { display: grid; gap: 0.85rem; }
@@ -102,7 +102,7 @@
       position: relative; overflow: hidden; padding: 1rem; min-height: 250px;
       background: linear-gradient(180deg, rgba(127,184,255,0.06), rgba(159,225,210,0.03));
     }
-    .qa-visual svg { width: 100%; height: auto; }
+    .qa-visual svg { width: 100%; height: auto; display: block; }
     .mini-icons { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 0.75rem; }
     .mini-icon-card {
       background: var(--color-surface-2); border: 1px solid var(--color-line); border-radius: 16px;
@@ -189,7 +189,7 @@
             </div>
             <div class="contact-item">
               <span class="label">LinkedIn</span>
-              <div class="contact-value"><a href="https://linkedin.com/in/animeshtripathi007" target="_blank" rel="noopener noreferrer">linkedin.com/in/animeshtripathi007</a></div>
+              <div class="contact-value"><a href="https://linkedin.com/in/animeshtripathi007" target="_blank" rel="noopener noreferrer">linkedin.com/in/<wbr>animeshtripathi007</a></div>
             </div>
             <div class="contact-item">
               <span class="label">Focus</span>
@@ -215,25 +215,25 @@
               <circle cx="82" cy="78" r="10" fill="#9fe1d2"/>
               <path d="M78 78l3 3 6-7" stroke="#0f1115" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
               <text x="100" y="84" fill="#f5f7fb" font-size="16" font-family="Manrope, Arial, sans-serif" font-weight="700">QA Checks</text>
-              <text x="100" y="108" fill="#8f98a8" font-size="12" font-family="Manrope, Arial, sans-serif">Validated workflows &amp; release readiness</text>
+              <text x="100" y="108" fill="#8f98a8" font-size="11" font-family="Manrope, Arial, sans-serif">Validated workflows &amp; release readiness</text>
               <text x="250" y="82" fill="#f5f7fb" font-size="16" font-family="Manrope, Arial, sans-serif" font-weight="700">Test Coverage</text>
               <rect x="250" y="98" width="172" height="10" rx="5" fill="rgba(255,255,255,0.08)"/>
               <rect x="250" y="98" width="132" height="10" rx="5" fill="#7fb8ff"/>
               <text x="430" y="106" fill="#f5f7fb" font-size="12" font-family="Manrope, Arial, sans-serif">78%</text>
               <text x="66" y="184" fill="#f5f7fb" font-size="15" font-family="Manrope, Arial, sans-serif" font-weight="700">Manual Testing Flow</text>
               <rect x="66" y="202" width="110" height="18" rx="9" fill="rgba(127,184,255,0.12)"/>
-              <text x="80" y="214" fill="#c5ccd8" font-size="11" font-family="Manrope, Arial, sans-serif">Requirement Review</text>
+              <text x="80" y="214" fill="#c5ccd8" font-size="10.5" font-family="Manrope, Arial, sans-serif">Requirement Review</text>
               <rect x="66" y="228" width="128" height="18" rx="9" fill="rgba(159,225,210,0.10)"/>
-              <text x="80" y="240" fill="#c5ccd8" font-size="11" font-family="Manrope, Arial, sans-serif">Test Case Execution</text>
+              <text x="80" y="240" fill="#c5ccd8" font-size="10.5" font-family="Manrope, Arial, sans-serif">Test Case Execution</text>
               <rect x="66" y="254" width="104" height="18" rx="9" fill="rgba(127,184,255,0.12)"/>
-              <text x="80" y="266" fill="#c5ccd8" font-size="11" font-family="Manrope, Arial, sans-serif">Bug Validation</text>
+              <text x="80" y="266" fill="#c5ccd8" font-size="10.5" font-family="Manrope, Arial, sans-serif">Bug Validation</text>
               <text x="290" y="184" fill="#f5f7fb" font-size="15" font-family="Manrope, Arial, sans-serif" font-weight="700">Defect Tracking</text>
               <circle cx="304" cy="214" r="8" fill="#7fb8ff"/>
-              <text x="322" y="219" fill="#c5ccd8" font-size="12" font-family="Manrope, Arial, sans-serif">Identified</text>
+              <text x="322" y="219" fill="#c5ccd8" font-size="11" font-family="Manrope, Arial, sans-serif">Identified</text>
               <circle cx="304" cy="244" r="8" fill="#9fe1d2"/>
-              <text x="322" y="249" fill="#c5ccd8" font-size="12" font-family="Manrope, Arial, sans-serif">Retested</text>
+              <text x="322" y="249" fill="#c5ccd8" font-size="11" font-family="Manrope, Arial, sans-serif">Retested</text>
               <circle cx="304" cy="274" r="8" fill="#7fb8ff" opacity="0.7"/>
-              <text x="322" y="279" fill="#c5ccd8" font-size="12" font-family="Manrope, Arial, sans-serif">Closed</text>
+              <text x="322" y="279" fill="#c5ccd8" font-size="11" font-family="Manrope, Arial, sans-serif">Closed</text>
             </svg>
           </div>
           <div class="card summary-card">
