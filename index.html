@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23111827'/%3E%3Cpath d='M16 34l9 9L48 20' fill='none' stroke='%237fb8ff' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='48' cy='20' r='5' fill='%239fe1d2'/%3E%3C/svg%3E">
   <style>
     :root {
       --text-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.85rem);
@@ -61,104 +62,61 @@
       display: flex; justify-content: space-between; align-items: center; gap: 1rem;
       padding: 0.95rem 0;
     }
-    .brand {
-      display: flex; align-items: center; gap: 0.9rem; min-width: 0;
-    }
+    .brand { display: flex; align-items: center; gap: 0.9rem; min-width: 0; }
     .brand-mark {
-      width: 44px; height: 44px; border-radius: 14px;
-      display: grid; place-items: center;
+      width: 44px; height: 44px; border-radius: 14px; display: grid; place-items: center;
       background: linear-gradient(135deg, rgba(127,184,255,0.22), rgba(159,225,210,0.16));
-      border: 1px solid rgba(255,255,255,0.10);
-      box-shadow: var(--shadow-soft);
-      flex: 0 0 auto;
+      border: 1px solid rgba(255,255,255,0.10); box-shadow: var(--shadow-soft); flex: 0 0 auto;
     }
     .brand-text strong { display: block; font-size: var(--text-sm); }
     .brand-text span { display: block; font-size: var(--text-xs); color: var(--color-text-faint); margin-top: 0.08rem; }
     nav { display: flex; gap: 1.1rem; flex-wrap: wrap; }
     nav a { color: var(--color-text-muted); font-size: var(--text-sm); }
-
     .hero { padding: 4.8rem 0 2.6rem; }
-    .hero-grid {
-      display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.8fr); gap: 1.2rem;
-      align-items: stretch;
-    }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr); gap: 1.2rem; align-items: stretch; }
     .panel {
       background: linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0.012));
-      border: 1px solid var(--color-line);
-      border-radius: 28px;
-      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--color-line); border-radius: 28px; box-shadow: var(--shadow-soft);
     }
     .hero-main { padding: clamp(1.5rem, 2.4vw, 2.4rem); }
     .hero-side { padding: clamp(1.2rem, 2vw, 1.6rem); display: grid; gap: 1rem; }
     .eyebrow {
-      display: inline-flex; align-items: center; gap: 0.55rem;
-      border: 1px solid rgba(127,184,255,0.22);
-      color: var(--color-primary);
-      background: rgba(127,184,255,0.08);
-      border-radius: var(--radius-full);
-      padding: 0.45rem 0.85rem;
-      font-size: var(--text-xs); font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em;
-      margin-bottom: 1rem;
+      display: inline-flex; align-items: center; gap: 0.55rem; border: 1px solid rgba(127,184,255,0.22);
+      color: var(--color-primary); background: rgba(127,184,255,0.08); border-radius: var(--radius-full);
+      padding: 0.45rem 0.85rem; font-size: var(--text-xs); font-weight: 800; text-transform: uppercase;
+      letter-spacing: 0.05em; margin-bottom: 1rem;
     }
-    h1 {
-      font-family: var(--font-display);
-      font-size: var(--text-2xl);
-      line-height: 1.02;
-      letter-spacing: -0.02em;
-      max-width: 10ch;
-    }
-    .headline {
-      margin-top: 1rem;
-      color: var(--color-text-muted);
-      font-size: var(--text-lg);
-      max-width: 40ch;
-    }
-    .contact-grid {
-      margin-top: 1.5rem;
-      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.85rem;
-    }
-    .contact-item, .metric, .card {
-      background: var(--color-surface);
-      border: 1px solid var(--color-line);
-      border-radius: 18px;
-    }
-    .contact-item {
-      padding: 0.95rem 1rem;
-      min-height: 88px;
-    }
-    .label {
-      display: block;
-      font-size: var(--text-xs);
-      color: var(--color-text-faint);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.35rem;
-    }
+    h1 { font-family: var(--font-display); font-size: var(--text-2xl); line-height: 1.02; letter-spacing: -0.02em; max-width: 10ch; }
+    .headline { margin-top: 1rem; color: var(--color-text-muted); font-size: var(--text-lg); max-width: 40ch; }
+    .contact-grid { margin-top: 1.5rem; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.85rem; }
+    .contact-item, .metric, .card { background: var(--color-surface); border: 1px solid var(--color-line); border-radius: 18px; }
+    .contact-item { padding: 0.95rem 1rem; min-height: 88px; }
+    .label { display: block; font-size: var(--text-xs); color: var(--color-text-faint); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.35rem; }
     .contact-value { color: var(--color-text-muted); }
     .summary-card, .metrics, .section-card, .skill-card, .edu-card, .lang-card { padding: 1.2rem; }
     .summary-card p, .section-card p, .skill-line, li, .contact-value, .edu-card p, .lang-card p { color: var(--color-text-muted); }
     .metrics { display: grid; gap: 0.85rem; }
     .metric { padding: 0.95rem 1rem; }
     .metric strong { display: block; font-size: 1.15rem; color: var(--color-text); margin-bottom: 0.2rem; }
-
+    .qa-visual {
+      position: relative; overflow: hidden; padding: 1rem; min-height: 250px;
+      background: linear-gradient(180deg, rgba(127,184,255,0.06), rgba(159,225,210,0.03));
+    }
+    .qa-visual svg { width: 100%; height: auto; }
+    .mini-icons { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 0.75rem; }
+    .mini-icon-card {
+      background: var(--color-surface-2); border: 1px solid var(--color-line); border-radius: 16px;
+      padding: 0.9rem 0.75rem; text-align: center;
+    }
+    .mini-icon-card svg { margin: 0 auto 0.55rem; }
+    .mini-icon-card span { display: block; font-size: var(--text-xs); color: var(--color-text-muted); font-weight: 700; }
     main section { padding: 0.75rem 0; }
     .section-head { margin-bottom: 0.9rem; }
-    .section-head h2 {
-      font-family: var(--font-display);
-      font-size: var(--text-xl);
-      line-height: 1.08;
-    }
+    .section-head h2 { font-family: var(--font-display); font-size: var(--text-xl); line-height: 1.08; }
     .timeline { display: grid; gap: 1rem; }
-    .role-card {
-      padding: 1.35rem 1.35rem 1.35rem 1.55rem;
-      position: relative;
-      overflow: hidden;
-    }
+    .role-card { padding: 1.35rem 1.35rem 1.35rem 1.55rem; position: relative; overflow: hidden; }
     .role-card::before {
-      content: "";
-      position: absolute;
-      left: 0; top: 0; bottom: 0;
-      width: 3px;
+      content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
       background: linear-gradient(180deg, var(--color-primary), var(--color-accent));
     }
     .role-head { margin-bottom: 0.8rem; }
@@ -166,28 +124,16 @@
     .role-meta { color: var(--color-text-faint); font-size: var(--text-sm); }
     ul { padding-left: 1.1rem; }
     li { margin: 0.44rem 0; }
-
     .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
     .skill-card h3, .edu-card h3, .lang-card h3 { font-size: 1rem; margin-bottom: 0.75rem; }
     .skill-line { margin-bottom: 0.72rem; }
     .chips { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.8rem; }
     .chip {
-      display: inline-flex; align-items: center;
-      padding: 0.5rem 0.75rem;
-      border-radius: var(--radius-full);
-      border: 1px solid rgba(127,184,255,0.12);
-      background: var(--color-chip);
-      color: var(--color-text-muted);
-      font-size: var(--text-xs);
-      font-weight: 700;
+      display: inline-flex; align-items: center; padding: 0.5rem 0.75rem; border-radius: var(--radius-full);
+      border: 1px solid rgba(127,184,255,0.12); background: var(--color-chip);
+      color: var(--color-text-muted); font-size: var(--text-xs); font-weight: 700;
     }
-
-    .subtle-divider {
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--color-line), transparent);
-      margin: 1.25rem 0 0.5rem;
-    }
-
+    .subtle-divider { height: 1px; background: linear-gradient(90deg, transparent, var(--color-line), transparent); margin: 1.25rem 0 0.5rem; }
     @media (max-width: 920px) {
       .hero-grid, .grid-2, .contact-grid { grid-template-columns: 1fr; }
       nav { display: none; }
@@ -198,6 +144,7 @@
       .hero { padding-top: 4rem; }
       .hero-main, .hero-side, .summary-card, .metrics, .section-card, .skill-card, .edu-card, .lang-card, .role-card { padding: 1rem; }
       .role-card { padding-left: 1.2rem; }
+      .mini-icons { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -231,7 +178,6 @@
           <div class="eyebrow">Open to remote opportunities</div>
           <h1>Animesh Pati Tripathi</h1>
           <p class="headline">Quality Assurance Engineer | Manual &amp; Functional Testing | API Testing (Swagger) | Banking, Healthcare, HRMS &amp; Compliance SaaS</p>
-
           <div class="contact-grid">
             <div class="contact-item">
               <span class="label">Location</span>
@@ -253,6 +199,43 @@
         </div>
 
         <aside class="panel hero-side">
+          <div class="card qa-visual" aria-label="QA workflow illustration">
+            <svg viewBox="0 0 520 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Software quality assurance dashboard illustration">
+              <defs>
+                <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#7fb8ff" stop-opacity="0.35"/>
+                  <stop offset="100%" stop-color="#9fe1d2" stop-opacity="0.12"/>
+                </linearGradient>
+              </defs>
+              <rect x="22" y="20" width="476" height="300" rx="24" fill="#11161e" stroke="rgba(255,255,255,0.08)"/>
+              <rect x="48" y="48" width="164" height="86" rx="16" fill="#171d27" stroke="rgba(255,255,255,0.06)"/>
+              <rect x="230" y="48" width="242" height="86" rx="16" fill="url(#g1)" stroke="rgba(255,255,255,0.06)"/>
+              <rect x="48" y="154" width="204" height="136" rx="16" fill="#171d27" stroke="rgba(255,255,255,0.06)"/>
+              <rect x="272" y="154" width="200" height="136" rx="16" fill="#171d27" stroke="rgba(255,255,255,0.06)"/>
+              <circle cx="82" cy="78" r="10" fill="#9fe1d2"/>
+              <path d="M78 78l3 3 6-7" stroke="#0f1115" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <text x="100" y="84" fill="#f5f7fb" font-size="16" font-family="Manrope, Arial, sans-serif" font-weight="700">QA Checks</text>
+              <text x="100" y="108" fill="#8f98a8" font-size="12" font-family="Manrope, Arial, sans-serif">Validated workflows &amp; release readiness</text>
+              <text x="250" y="82" fill="#f5f7fb" font-size="16" font-family="Manrope, Arial, sans-serif" font-weight="700">Test Coverage</text>
+              <rect x="250" y="98" width="172" height="10" rx="5" fill="rgba(255,255,255,0.08)"/>
+              <rect x="250" y="98" width="132" height="10" rx="5" fill="#7fb8ff"/>
+              <text x="430" y="106" fill="#f5f7fb" font-size="12" font-family="Manrope, Arial, sans-serif">78%</text>
+              <text x="66" y="184" fill="#f5f7fb" font-size="15" font-family="Manrope, Arial, sans-serif" font-weight="700">Manual Testing Flow</text>
+              <rect x="66" y="202" width="110" height="18" rx="9" fill="rgba(127,184,255,0.12)"/>
+              <text x="80" y="214" fill="#c5ccd8" font-size="11" font-family="Manrope, Arial, sans-serif">Requirement Review</text>
+              <rect x="66" y="228" width="128" height="18" rx="9" fill="rgba(159,225,210,0.10)"/>
+              <text x="80" y="240" fill="#c5ccd8" font-size="11" font-family="Manrope, Arial, sans-serif">Test Case Execution</text>
+              <rect x="66" y="254" width="104" height="18" rx="9" fill="rgba(127,184,255,0.12)"/>
+              <text x="80" y="266" fill="#c5ccd8" font-size="11" font-family="Manrope, Arial, sans-serif">Bug Validation</text>
+              <text x="290" y="184" fill="#f5f7fb" font-size="15" font-family="Manrope, Arial, sans-serif" font-weight="700">Defect Tracking</text>
+              <circle cx="304" cy="214" r="8" fill="#7fb8ff"/>
+              <text x="322" y="219" fill="#c5ccd8" font-size="12" font-family="Manrope, Arial, sans-serif">Identified</text>
+              <circle cx="304" cy="244" r="8" fill="#9fe1d2"/>
+              <text x="322" y="249" fill="#c5ccd8" font-size="12" font-family="Manrope, Arial, sans-serif">Retested</text>
+              <circle cx="304" cy="274" r="8" fill="#7fb8ff" opacity="0.7"/>
+              <text x="322" y="279" fill="#c5ccd8" font-size="12" font-family="Manrope, Arial, sans-serif">Closed</text>
+            </svg>
+          </div>
           <div class="card summary-card">
             <span class="label">Summary</span>
             <p>QA Engineer with 4.9 years testing banking, healthcare, HRMS, and compliance SaaS platforms. Full STLC ownership — test design, functional/regression/exploratory/smoke execution, and defect life cycle management — across Agile sprints in outsourced, NDA-bound client environments. Strong analytical and problem-solving foundation; collaborates closely with developers on API validation using Swagger.</p>
@@ -341,7 +324,21 @@
           <div class="skill-line"><strong>Core Strengths:</strong> Analytical Thinking, Problem-Solving, Communication, Cross-Team Collaboration</div>
         </div>
         <div class="card skill-card">
-          <h3>Key Tags</h3>
+          <h3>QA Focus Areas</h3>
+          <div class="mini-icons">
+            <div class="mini-icon-card">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12l4 4L19 6" stroke="#7fb8ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Test Execution</span>
+            </div>
+            <div class="mini-icon-card">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 8h8M8 12h8M8 16h5" stroke="#9fe1d2" stroke-width="2" stroke-linecap="round"/><rect x="4" y="4" width="16" height="16" rx="3" stroke="#7fb8ff" stroke-width="1.6"/></svg>
+              <span>Defect Tracking</span>
+            </div>
+            <div class="mini-icon-card">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 7h16M7 4v6M17 4v6M6 13h4M6 17h7" stroke="#7fb8ff" stroke-width="1.8" stroke-linecap="round"/><rect x="4" y="7" width="16" height="13" rx="3" stroke="#9fe1d2" stroke-width="1.6"/></svg>
+              <span>Release Validation</span>
+            </div>
+          </div>
           <div class="chips">
             <span class="chip">Manual Testing</span>
             <span class="chip">Functional Testing</span>
